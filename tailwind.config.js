@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  tailwindConfig: 'require./tailwind.config.js',
   content: {
     relative: true,
     files: [
       "./dist/index.html",
-      "./src/**/*.html}",
-      "./src/**/*.js"
+      "./src/**/*.{html,js}"
     ]
   },
   theme: {
@@ -33,6 +33,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('prettier-plugin-tailwindcss'),
     require('tailwindcss-debug-screens'),
   ],
 }

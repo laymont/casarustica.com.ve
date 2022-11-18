@@ -741,10 +741,6 @@ video {
   width: 1.75rem;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-5\/6 {
   width: 83.333333%;
 }
@@ -1058,6 +1054,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1308,6 +1309,10 @@ html, body {
 
   .sm\:ml-auto {
     margin-left: auto;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 
   .sm\:flex-row {
