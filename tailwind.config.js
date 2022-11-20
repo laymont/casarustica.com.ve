@@ -4,7 +4,7 @@ module.exports = {
   content: {
     relative: true,
     files: [
-      "./dist/index.html",
+      "./dist/*.{html,js}",
       "./src/**/*.{html,js}"
     ]
   },
