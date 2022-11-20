@@ -1,2 +1,6 @@
 node_modules/
 assets/
+.env
+.env.example
+.env.local
+.env.staging
