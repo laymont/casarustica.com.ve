@@ -12,293 +12,187 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
-<body class="debug-screens bg-body text-white font-poppins pb-0">
-    <img class="ml-36 h-64 absolute" src="img/logo.png" alt="Logo Top">
-    <header id="home" class="py-6">
-        <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-            <!-- logo top -->
-            <div class="h-8"></div>
-
-            <!-- menu -->
-            <ul
-                    class="md:flex md:items-center z-[-1] md:z-auto md:static absolute space-x-6 bg-body w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 top-[-400px] transition-all ease-in duration-500">
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-theme duration-500" href="#home">Home</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-theme duration-500" href="#historia">
-                        <span class="md:hidden">Nuestra</span> Historia
+<body class="debug-screens bg-white font-poppins w-full bg-body">
+<header id="home" class="w-full h-screen-partial bg-header bg-no-repeat bg-cover bg-local">
+    <div class="h-20 bg-black/40 shadow-lg z-50">
+        <nav class="flex flex-row justify-around items-center z-0">
+            <ul class="flex mt-6 space-x-10 text-xl sm:hidden">
+                <li>
+                    <a href="#historia"
+                       class="text-white hover:text-title hover:border-b hover:border-b-1 hover:border-b-title">Historia
                     </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-theme duration-500" href="#comida">
-                        <span class="md:hidden">Nuestra</span> Comida
+                <li>
+                    <a href="#comida"
+                       class="text-white hover:text-title hover:border-b hover:border-b-1 hover:border-b-title">Comida
                     </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-theme duration-500" href="#servicios">Servicios</a>
+                <li>
+                    <a href="#servicios"
+                       class="text-white hover:text-title hover:border-b hover:border-b-1 hover:border-b-title">Servicios
+                    </a>
                 </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-theme duration-500" href="#contactos">Contactos</a>
+                <li>
+                    <a href="#contactos"
+                       class="text-white hover:text-title hover:border-b hover:border-b-1 hover:border-b-title">Contactos
+                    </a>
                 </li>
             </ul>
-            <!-- hamburger -->
-            <div class="text-3xl cursor-pointer mx-2 md:hidden block">
-                <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
-            </div>
-        </div>
-    </header>
-
-    <div
-            class="mt-0 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full bg-header bg-no-repeat bg-cover bg-center bg-local">
-        <div class="flex flex-wrap md:flex-nowrap">
-            <nav class="inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
-                <div class="absolute left-50 transform -translate-x-1/2 space-y-6 mt-37">
-                    <a class="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body"
-                       href="#home">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
-                    </a>
-                    <a class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body" href="#historia">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Historia</span>
-                    </a>
-                    <a class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body" href="#comida">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Comida</span>
-                    </a>
-                    <a class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body" href="#servicios">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Servicios</span>
-                    </a>
-                    <a class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body" href="#contactos">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Contactos</span>
-                    </a>
-                </div>
-            </nav>
-
-            <!-- home -->
-            <div class="h-screen-partial flex flex-col justify-start items-center max-w-xl">
-                <div class="px-20 py-20 xl:py-48 2xl:py-56 lg:py-48 md:py-48">
-                    <p class="text-xl p-2 inline-block lg:p-1 sm:p-6">
-                        #haciendohistoria
-                    </p>
-                    <div
-                            class="flex px-6 py-2 bg-whatsapp space-x-2 justify-start items-center w-40 rounded rounded-md">
-                        <ion-icon size="large" name="logo-whatsapp"></ion-icon>
-                        <a href="https://wa.me/584241795702" target="_blank"
-                           class=" font-bold inline-block">
-                            Delivery
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- historia -->
-    <section id="historia" class="text-gray-600 overflow-hidden">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-                    <h2 class="text-sm sm:text-center md:text-left font-bold text-gray-200 tracking-widest">CASA RUSTICA</h2>
-                    <h1
-                            class="text-title font-bold text-4xl md:text-5xl lg:text-6xl text-center md:text-left">Nuestra <br>
-                                                                                                     Historia</h1>
-                    <div class=" flex border-t border-gray-200 py-2 sm:w-full my-6"></div>
-                    <p class="text-white leading-relaxed mb-4">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aut beatae commodi consectetur corporis cupiditate eligendi enim, est harum in laborum magnam minima, nisi nostrum obcaecati perspiciatis possimus quidem quis quos! Ad adipisci aliquid amet asperiores assumenda at consequuntur culpa deleniti dicta dignissimos, exercitationem fuga inventore ipsum iste optio placeat porro possimus quasi quidem repellendus, rerum voluptate voluptatibus voluptatum? Atque consequatur expedita facilis magnam nemo, quisquam suscipit voluptatem. Accusantium architecto at cumque debitis dicta eius fuga fugit in, itaque, magnam placeat, quasi sed unde? Accusantium adipisci beatae consectetur, culpa earum expedita explicabo fugit in libero provident, recusandae sapiente voluptatem?
-                    </p>
-                </div>
-                <img alt="logo"
-                     class="lg:w-1/3 w-full lg:h-auto h-64 ml-40 sm:mx-auto object-contain object-center rounded"
-                     src="img/logo.png">
-            </div>
-        </div>
-    </section>
-
-    <!-- comida -->
-    <div class="container mt-20 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-        <section class="w-full">
-            <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                <div class="lg:max-w-lg lg:w-full sm:hidden md:w-2/6 w-5/6 mb-10 md:mb-0">
-                    <img class="object-contain object-center rounded" alt="hero" src="img/comida.png">
-                </div>
-                <div id="comida"
-                        class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                    <h2 class="text-sm text-gray-200 tracking-widest">CASA RUSTICA</h2>
-                    <h1 class="text-title font-bold text-4xl md:text-5xl lg:text-6xl text-center md:text-left">Nuestra
-                        <br> Comida
-                    </h1>
-                    <div class=" flex border-t border-gray-200 py-2 sm:w-full my-6"></div>
-                    <h1 class="sm:text-4xl md:text-xl text-3xl mb-4 font-medium text-gray-400">
-                        Lorem ipsum dolor sit.
-                    </h1>
-                    <p class="sm:text-left md:text-xs md:leading-loose mb-8 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores cupiditate
-                        debitis dolor expedita fugit iusto laudantium mollitia nemo, quasi quisquam quos similique
-                        sunt, temporibus tenetur veniam voluptatum? Adipisci earum exercitationem necessitatibus
-                        officiis saepe! Debitis deserunt dolorum praesentium saepe? Ab accusamus adipisci aperiam asperiores cupiditate dicta dolore eos est excepturi fugit inventore iure libero magni, nobis nostrum officia omnis, perferendis quasi quis quisquam sed soluta suscipit tempora ullam vitae voluptate voluptatem voluptatum? Ad cupiditate esse rerum voluptas! Cupiditate error esse in iusto, laudantium maiores maxime minus molestiae obcaecati optio qui repellat sapiente temporibus vel voluptatibus! Aperiam debitis earum molestiae numquam recusandae, repellendus reprehenderit voluptatibus.
-                    </p>
-                    <div class="mt-10">
-                        <a href="#_" class="inline-flex overflow-hidden text-white bg-gray-900 rounded group">
-                            <span
-                                    class="px-3.5 py-2 text-white bg-theme group-hover:bg-theme/70 flex items-center justify-center">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                                </svg>
-                            </span>
-                            <span class="pl-4 pr-5 py-2.5">Ver Menu</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- servicios -->
-    <section
-             class="container mt-20 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-        <div class="container px-5 py-24 mx-auto">
-            <div id="servicios" class="flex flex-col w-full mb-20">
-                <h2 class="text-sm sm:text-center md:text-left text-gray-200 tracking-widest">Casa Rustica</h2>
-                <h1 class="text-title font-bold text-4xl md:text-5xl lg:text-6xl text-center md:text-left">Servicios</h1>
-            </div>
-            <div class=" flex border-t border-gray-200 py-2 sm:w-full my-6"></div>
-            <div class="flex flex-wrap -m-4">
-                <div class="p-4 md:w-full">
-                    <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-                        <div class="flex items-center mb-3">
-                            <h2 class="text-gray-900 text-lg title-font font-medium">Restaurante</h2>
-                        </div>
-                        <div class="flex-grow">
-                            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                            <a class="mt-3 text-indigo-500 inline-flex items-center">Leer mas</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 md:w-full">
-                    <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-                        <div class="flex items-center mb-3">
-                            <h2 class="text-gray-900 text-lg title-font font-medium">Eventos</h2>
-                        </div>
-                        <div class="flex-grow">
-                            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                            <a class="mt-3 text-indigo-500 inline-flex items-center">Leer mas</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 md:w-full">
-                    <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
-                        <div class="flex items-center mb-3">
-                            <h2 class="text-gray-900 text-lg title-font font-medium">Festejos</h2>
-                        </div>
-                        <div class="flex-grow">
-                            <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
-                            <a class="mt-3 text-indigo-500 inline-flex items-center">Leer mas</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contactos -->
-    <section class="text-gray-600 body-font overflow-hidden mt-60">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="lg:w-4/5 mx-auto flex flex-wrap">
-                <div id="contactos" class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-                    <h2 class="text-sm sm:text-center md:text-left text-gray-200 tracking-widest">CASA RUSTICA</h2>
-                    <h1
-                            class="text-title font-bold text-4xl md:text-5xl lg:text-6xl text-center md:text-left">
-                        Contactos</h1>
-                    <div class=" flex border-t border-gray-200 py-2 sm:w-full my-6"></div>
-
-                    <div class="py-6 md:py-0 md:px-6 text-white text-base font-light">
-                        <div class="space-y-4">
-                            <p class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2 sm:mr-6">
-                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>
-                                    <a href="https://goo.gl/maps/8E6ijFaUWNgS43dL8" target="_blank">
-                                        Calle Ibarra, Macuto 1164, La Guaira
-                                    </a>
-                                </span>
-                            </p>
-                            <p class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2 sm:mr-6">
-                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-                                </svg>
-                                <span>
-                                    <a href="tel:+582123322152" class="">
-                                        +58 212 3322152
-                                    </a>
-                                </span>
-                            </p>
-                            <p class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mr-2 sm:mr-6">
-                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                                </svg>
-                                <span>
-                                    <a href="mailto=casarusticavzla@gmail.com">casarusticavzla@gmail.com</a>
-                                </span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-auto justify-center items-center mx-auto w-1/2 map-responsive">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7843.261905735516!2d-66.89570642597585!3d10.60799971524646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5b5f00f3fdf7%3A0x22d74e5302c5a4cc!2sCasa%20Rustica%20Pizzeria%20C.A.!5e0!3m2!1ses!2sve!4v1668793491476!5m2!1ses!2sve" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- footer -->
-    <footer class="text-gray-600 bg-white">
-        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                <img class="w-32" src="img/logo.png" alt="logo">
-                <span class="ml-3 text-xl">Casa Rustica</span>
+            <!--button-->
+            <a class="flex mt-6 px-6 py-2 rounded-lg text-sm font-medium bg-whatsapp"
+               href="">Delivery
             </a>
-            <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">©
-                                                                                                                   2018
-                                                                                                                   Casa Rustica —
-                <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">
-                    Design by Laymont Arratia
-                </a>
-            </p>
-            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-      <a class="text-gray-500">
-        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-        </svg>
-      </a>
-      <a class="ml-3 text-gray-500">
-        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
-          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-          <circle cx="4" cy="4" r="2" stroke="none"></circle>
-        </svg>
-      </a>
-    </span>
+        </nav>
+        <div class="flex flex-col justify-between items-center mt-20">
+            <div class="p-5">
+                <img class="object-contain h-72" src="img/logo.png">
+            </div>
         </div>
-    </footer>
+    </div>
+</header>
 
-    <script type="text/javascript" src="main.js"></script>
-    <script>
-        function Menu(e){
-            let list = document.querySelector('ul');
-            e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-        }
-    </script>
+<div class="w-full flex flex-wrap justify-center items-center h-screen-rest bg-body space-x-10 sm:space-y-1">
+    <div class="text-2xl text-white">@casarusticapizzeria</div>
+    <div class="text-4xl text-white">#haciendohistoria</div>
+</div>
+
+<div class="w-full flex flex-wrap justify-center items-center h-screen bg-body my-10 space-x-10 sm:space-y-1">
+    <div id="historia" class="w-1/2 sm:w-full sm:px-10">
+        <h2 class="text-1xl">Casa Rustica</h2>
+        <h1 class="text-4xl text-title">Nuestra <br>Historia</h1>
+        <div class="h-1 my-2 w-1/3 bg-white"></div>
+        <p class="mt-2 text-xl lg:text-base md:text-base sm:text-sm font-medium leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquam asperiores assumenda autem cupiditate eaque eius eum excepturi explicabo fuga hic id impedit ipsa itaque minima molestias natus necessitatibus nemo nostrum nulla obcaecati omnis pariatur quaerat quam quisquam, quo rem repellendus soluta suscipit ut velit voluptate voluptates. Nesciunt nulla possimus quas rem. Autem error nemo neque numquam temporibus. A asperiores blanditiis consequuntur corporis debitis dolorem ducimus error esse facilis fuga ipsam magnam minus nam nesciunt nisi nobis non odit omnis perferendis praesentium quae quisquam, ratione, recusandae similique sint soluta tenetur ut veritatis voluptate voluptates. Aliquid corporis deleniti eius.
+        </p>
+        <div class="mt-6">
+            <a href="#home" class="text-title">
+                <ion-icon size="large" name="arrow-up-circle-outline"></ion-icon>
+            </a>
+        </div>
+    </div>
+    <div class="w-1/3 sm:hidden">
+        <img class="object-contain h-screen" src="img/historia.png" alt="">
+    </div>
+</div>
+
+<div class="h-screen-rest bg-body"></div>
+
+<div class="w-full flex flex-wrap justify-center items-center h-screen bg-body my-10 space-x-10 sm:space-y-1">
+    <div class="w-1/3 sm:hidden">
+        <img class="object-contain h-screen" src="img/historia.png" alt="">
+    </div>
+    <div id="comida" class="w-1/2 sm:w-full sm:px-10">
+        <h2 class="text-1xl">Casa Rustica</h2>
+        <h1 class="text-4xl text-title">Nuestra <br>Comida</h1>
+        <div class="h-1 my-2 w-1/3 bg-white"></div>
+        <p class="mt-2 text-xl lg:text-base md:text-base sm:text-sm font-medium leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquam asperiores assumenda autem cupiditate eaque eius eum excepturi explicabo fuga hic id impedit ipsa itaque minima molestias natus necessitatibus nemo nostrum nulla obcaecati omnis pariatur quaerat quam quisquam, quo rem repellendus soluta suscipit ut velit voluptate voluptates. Nesciunt nulla possimus quas rem. Autem error nemo neque numquam temporibus.
+        </p>
+
+        <div class="my-4">
+            <a href="#_" class="inline-flex overflow-hidden text-white bg-gray-900 rounded group">
+                <span class="px-3.5 py-2 text-white bg-purple-500 group-hover:bg-purple-600 flex items-center justify-center">
+                    <ion-icon size="large" name="eye-outline"></ion-icon>
+                </span>
+                <span class="pl-4 pr-5 py-2.5">Menu</span>
+            </a>
+        </div>
+        <div class="mt-6">
+            <a href="#home" class="text-title">
+                <ion-icon size="large" name="arrow-up-circle-outline"></ion-icon>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="h-screen-rest bg-body"></div>
+
+<div class="w-full flex flex-wrap justify-center items-center h-screen bg-body my-10">
+    <div id="servicios"></div>
+    <img class="object-contain h-48" src="img/logo.png">
+    <div class="flex xl:flex-row lg:flex-row sm:flex-wrap mx-auto">
+        <div class="px-8 mx-auto sm:my-4">
+            <h2 class="text-1xl">Servicio</h2>
+            <h1 class="text-3xl text-title">Restaurante</h1>
+            <p class="sm:text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci aliquam commodi doloremque eius ex inventore maiores officia perferendis, provident quae, quam quia quod reiciendis rem repellat reprehenderit rerum voluptas.
+            </p>
+        </div>
+        <div class="px-8 mx-auto sm:my-4">
+            <h2 class="text-1xl">Servicio</h2>
+            <h1 class="text-3xl text-title">Eventos</h1>
+            <p class="sm:text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores at blanditiis, dicta doloremque ea esse ex explicabo illum impedit modi, neque non repellat tempora? Corporis distinctio earum fugiat minus soluta?
+            </p>
+        </div>
+        <div class="px-8 mx-auto sm:my-4">
+            <h2 class="text-1xl">servicio</h2>
+            <h1 class="text-3xl text-title">Festejos</h1>
+            <p class="sm:text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At incidunt iure officia
+                              tempore unde!
+                Accusamus, alias, debitis dolorem ea eius explicabo, illo incidunt ipsa laboriosam necessitatibus nemo praesentium quam suscipit?</p>
+        </div>
+    </div>
+    <div class="mt-6">
+        <a href="#home" class="text-title">
+            <ion-icon size="large" name="arrow-up-circle-outline"></ion-icon>
+        </a>
+    </div>
+</div>
+
+<div class="h-screen-rest bg-body"></div>
+
+<div class="w-full flex flex-wrap justify-center items-center h-screen bg-body my-10">
+    <div class="flex xl:flex-row lg:flex-row sm:flex-wrap mx-auto space-x-10">
+        <div id="contactos" class="w-full px-16">
+            <h2 class="text-1x">Casa Rustica</h2>
+            <h1 class="text-4xl text-title">Contactos</h1>
+            <div class="my-8 space-y-4">
+                <p class="block">
+                    <span class="mx-2">
+                        <ion-icon name="location"></ion-icon>
+                    </span>
+                    Calle Ibarra, Macuto 1164, La Guaira
+                </p>
+                <p class="block">
+                    <span class="mx-2">
+                        <ion-icon name="call"></ion-icon>
+                    </span>
+                    +58 212 3322152
+                </p>
+                <p class="block">
+                    <span class="mx-2">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    casarusticavzla@gmail.com
+                </p>
+                <div class="mt-6">
+                    <a href="#home" class="text-title">
+                        <ion-icon size="large" name="arrow-up-circle-outline"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full">
+            <iframe class="w-[50vw] sm:w-[80vw] h-[60vh]"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3921.6803237982517!2d-66.90289468527145!3d10.604147665249792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5b5f00f3fdf7%3A0x22d74e5302c5a4cc!2sCasa%20Rustica%20Pizzeria%20C.A.!5e0!3m2!1ses!2sve!4v1668910854345!5m2!1ses!2sve" width="" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="w-full flex flex-wrap justify-center items-center h-40 bg-white space-x-80">
+    <div>
+        <img class="h-32" src="img/logo.png" alt="">
+    </div>
+    <div>
+        <span class="text-base text-body">©2022 CASA RUSTICA PIZZERIA Y HELADERIA ™ 2018</span>
+    </div>
+    <div class="text-black">
+        <ion-icon size="large" name="logo-whatsapp"></ion-icon>
+        <ion-icon size="large" name="logo-facebook"></ion-icon>
+        <ion-icon size="large" name="logo-instagram"></ion-icon>
+    </div>
+</div>
+
 </body>
 </html>
